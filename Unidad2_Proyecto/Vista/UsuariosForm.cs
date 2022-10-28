@@ -31,11 +31,7 @@ namespace Vista
             UsuariosDataGridView.DataSource = await userDatos.DevolverListaAsync();
         }
 
-        private void NuevoButton_Click(object sender, EventArgs e)
-        {
-            HabilitarControles();
-            tipoOperacion = "Nuevo";
-        }
+        
 
         private void HabilitarControles()
         {
@@ -56,12 +52,7 @@ namespace Vista
             EstaActivoCheckBox.Enabled = false;
         }
 
-        private void CancelarButton_Click(object sender, EventArgs e)
-        {
-            DesabilitarControles();
-            LimpiarControles();
-        }
-
+     
         private void LimpiarControles()
         {                           //Dos formas mas
             CodigoTextBox.Clear(); //String.Empty
@@ -71,8 +62,14 @@ namespace Vista
             RolComboBox.Text = String.Empty;
             EstaActivoCheckBox.Checked = false;
         }
+      
+        private void NuevoButton_Click_1(object sender, EventArgs e)
+        {
+            HabilitarControles();
+            tipoOperacion = "Nuevo";
+        }
 
-        private void ModificarButton_Click(object sender, EventArgs e)
+        private void ModificarButton_Click_1(object sender, EventArgs e)
         {
             tipoOperacion = "Modificar";
             if (UsuariosDataGridView.SelectedRows.Count > 0)
@@ -92,9 +89,25 @@ namespace Vista
             }
         }
 
+        private async void EliminarButton_Click(object sender, EventArgs e)
+        {
+            if (UsuariosDataGridView.SelectedRows.Count > 0)
+            {
+                bool elimino = await userDatos.EliminarAsync(UsuariosDataGridView.CurrentRow.Cells["Codigo"].Value.ToString());
+                if (elimino)
+                {
+                    LlenarDataGrid();
+                    MessageBox.Show("Usuario Eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         private async void GuardarButton_Click(object sender, EventArgs e)
         {
-
             user = new Usuario();
 
             if (tipoOperacion == "Nuevo")
@@ -192,24 +205,13 @@ namespace Vista
                     MessageBox.Show("Usuario no modificado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
 
-        private async void EliminarButton_Click(object sender, EventArgs e)
+        private void CancelarButton_Click(object sender, EventArgs e)
         {
-            if (UsuariosDataGridView.SelectedRows.Count > 0)
-            {
-                bool elimino = await userDatos.EliminarAsync(UsuariosDataGridView.CurrentRow.Cells["Codigo"].Value.ToString());
-                if (elimino)
-                {
-                    LlenarDataGrid();
-                    MessageBox.Show("Usuario Eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Usuario no eliminado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+
+            DesabilitarControles();
+            LimpiarControles();
         }
     }
 }
