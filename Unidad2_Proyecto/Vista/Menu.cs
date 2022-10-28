@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class Login : Form
+    public partial class Menu : Form
     {
-        public Login()
+        public Menu()
         {
             InitializeComponent();
+        }
+
+        private void listaDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsuariosForm usuariosForm = new UsuariosForm();
+            usuariosForm.Show();
         }
     }
 }
