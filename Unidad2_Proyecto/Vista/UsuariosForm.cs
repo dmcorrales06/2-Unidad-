@@ -155,7 +155,7 @@ namespace Vista
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no se pudo guardar", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Usuario no guardado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else if (tipoOperacion == "Modificar")

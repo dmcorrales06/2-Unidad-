@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductosForm));
             this.label1 = new System.Windows.Forms.Label();
             this.CodigoTextBox = new System.Windows.Forms.TextBox();
@@ -47,14 +48,16 @@
             this.ModificarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.ProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 15);
+            this.label1.Location = new System.Drawing.Point(107, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 0;
@@ -62,14 +65,16 @@
             // 
             // CodigoTextBox
             // 
-            this.CodigoTextBox.Location = new System.Drawing.Point(108, 9);
+            this.CodigoTextBox.Enabled = false;
+            this.CodigoTextBox.Location = new System.Drawing.Point(167, 12);
             this.CodigoTextBox.Name = "CodigoTextBox";
             this.CodigoTextBox.Size = new System.Drawing.Size(192, 22);
             this.CodigoTextBox.TabIndex = 1;
             // 
             // DescripcionTextBox
             // 
-            this.DescripcionTextBox.Location = new System.Drawing.Point(108, 37);
+            this.DescripcionTextBox.Enabled = false;
+            this.DescripcionTextBox.Location = new System.Drawing.Point(167, 40);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
             this.DescripcionTextBox.Size = new System.Drawing.Size(192, 22);
             this.DescripcionTextBox.TabIndex = 3;
@@ -77,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 40);
+            this.label2.Location = new System.Drawing.Point(79, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 2;
@@ -85,15 +90,17 @@
             // 
             // ExistenciaTextBox
             // 
-            this.ExistenciaTextBox.Location = new System.Drawing.Point(108, 65);
+            this.ExistenciaTextBox.Enabled = false;
+            this.ExistenciaTextBox.Location = new System.Drawing.Point(167, 68);
             this.ExistenciaTextBox.Name = "ExistenciaTextBox";
             this.ExistenciaTextBox.Size = new System.Drawing.Size(192, 22);
             this.ExistenciaTextBox.TabIndex = 5;
+            this.ExistenciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ExistenciaTextBox_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 67);
+            this.label3.Location = new System.Drawing.Point(90, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 16);
             this.label3.TabIndex = 4;
@@ -101,15 +108,17 @@
             // 
             // PrecioTextBox
             // 
-            this.PrecioTextBox.Location = new System.Drawing.Point(108, 93);
+            this.PrecioTextBox.Enabled = false;
+            this.PrecioTextBox.Location = new System.Drawing.Point(167, 96);
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(192, 22);
             this.PrecioTextBox.TabIndex = 7;
+            this.PrecioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioTextBox_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 95);
+            this.label4.Location = new System.Drawing.Point(112, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 6;
@@ -117,8 +126,9 @@
             // 
             // FechaDateTimePicker
             // 
+            this.FechaDateTimePicker.Enabled = false;
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(108, 121);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(167, 124);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
             this.FechaDateTimePicker.Size = new System.Drawing.Size(192, 22);
             this.FechaDateTimePicker.TabIndex = 8;
@@ -126,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 124);
+            this.label5.Location = new System.Drawing.Point(113, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 9;
@@ -135,27 +145,30 @@
             // ImagenPictureBox
             // 
             this.ImagenPictureBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ImagenPictureBox.Location = new System.Drawing.Point(327, 9);
+            this.ImagenPictureBox.Enabled = false;
+            this.ImagenPictureBox.Location = new System.Drawing.Point(386, 12);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
             this.ImagenPictureBox.Size = new System.Drawing.Size(150, 125);
+            this.ImagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenPictureBox.TabIndex = 10;
             this.ImagenPictureBox.TabStop = false;
             // 
             // AdjuntarButton
             // 
-            this.AdjuntarButton.Location = new System.Drawing.Point(402, 140);
+            this.AdjuntarButton.Location = new System.Drawing.Point(461, 143);
             this.AdjuntarButton.Name = "AdjuntarButton";
             this.AdjuntarButton.Size = new System.Drawing.Size(75, 23);
             this.AdjuntarButton.TabIndex = 11;
             this.AdjuntarButton.Text = "Adjuntar...";
             this.AdjuntarButton.UseVisualStyleBackColor = true;
+            this.AdjuntarButton.Click += new System.EventHandler(this.AdjuntarButton_Click);
             // 
             // CancelarButton
             // 
             this.CancelarButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelarButton.Image = ((System.Drawing.Image)(resources.GetObject("CancelarButton.Image")));
             this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelarButton.Location = new System.Drawing.Point(406, 179);
+            this.CancelarButton.Location = new System.Drawing.Point(495, 179);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(95, 46);
             this.CancelarButton.TabIndex = 21;
@@ -168,52 +181,56 @@
             this.EliminarButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(316, 179);
+            this.EliminarButton.Location = new System.Drawing.Point(405, 179);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(84, 46);
             this.EliminarButton.TabIndex = 20;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
             this.GuardarButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(212, 179);
+            this.GuardarButton.Location = new System.Drawing.Point(301, 179);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(98, 46);
             this.GuardarButton.TabIndex = 19;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // ModificarButton
             // 
             this.ModificarButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModificarButton.Image = ((System.Drawing.Image)(resources.GetObject("ModificarButton.Image")));
             this.ModificarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ModificarButton.Location = new System.Drawing.Point(108, 179);
+            this.ModificarButton.Location = new System.Drawing.Point(197, 179);
             this.ModificarButton.Name = "ModificarButton";
             this.ModificarButton.Size = new System.Drawing.Size(98, 46);
             this.ModificarButton.TabIndex = 18;
             this.ModificarButton.Text = "Modificar";
             this.ModificarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ModificarButton.UseVisualStyleBackColor = true;
+            this.ModificarButton.Click += new System.EventHandler(this.ModificarButton_Click);
             // 
             // NuevoButton
             // 
             this.NuevoButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NuevoButton.Location = new System.Drawing.Point(21, 179);
+            this.NuevoButton.Location = new System.Drawing.Point(110, 179);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(81, 46);
             this.NuevoButton.TabIndex = 17;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // ProductosDataGridView
             // 
@@ -225,14 +242,18 @@
             this.ProductosDataGridView.Name = "ProductosDataGridView";
             this.ProductosDataGridView.RowHeadersWidth = 51;
             this.ProductosDataGridView.RowTemplate.Height = 24;
-            this.ProductosDataGridView.Size = new System.Drawing.Size(529, 150);
+            this.ProductosDataGridView.Size = new System.Drawing.Size(730, 150);
             this.ProductosDataGridView.TabIndex = 22;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ProductosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 379);
+            this.ClientSize = new System.Drawing.Size(728, 379);
             this.Controls.Add(this.ProductosDataGridView);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.EliminarButton);
@@ -256,6 +277,7 @@
             this.Load += new System.EventHandler(this.ProductosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +303,6 @@
         private System.Windows.Forms.Button ModificarButton;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.DataGridView ProductosDataGridView;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

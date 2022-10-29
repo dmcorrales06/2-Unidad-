@@ -132,8 +132,8 @@ namespace Datos
             byte[] imagen = new byte[0];
             try
             {
-                string sql = "SELECT Imagen FROMproducto WHERE Codigo=@Codigo;";
-
+                string sql = "SELECT Imagen FROM producto WHERE Codigo=@Codigo;";
+                 
                 using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
                 {
                     await _conexion.OpenAsync();

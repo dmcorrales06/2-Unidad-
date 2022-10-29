@@ -22,5 +22,11 @@ namespace Vista
             UsuariosForm usuariosForm = new UsuariosForm();
             usuariosForm.Show();
         }
+
+        private void listaDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductosForm productosForm = new ProductosForm();
+            productosForm.Show();
+        }
     }
 }
