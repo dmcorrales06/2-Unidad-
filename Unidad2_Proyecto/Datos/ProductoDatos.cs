@@ -79,7 +79,7 @@ namespace Datos
                 using (MySqlConnection _conexion = new MySqlConnection(CadenaConexion.Cadena))
                 {
                     await _conexion.OpenAsync();
-                    using (MySqlCommand comando = new MySqlCommand (sql, _conexion))
+                    using (MySqlCommand comando = new MySqlCommand(sql, _conexion))
                     {
                         comando.CommandType = System.Data.CommandType.Text;
                         comando.Parameters.Add("@Codigo", MySqlDbType.Int32).Value = producto.Codigo;
@@ -127,7 +127,7 @@ namespace Datos
 
         }
 
-        public async Task<byte[]>SeleccionarImagen(string codigo)
+        public async Task<byte[]> SeleccionarImagen(string codigo)
         {
             byte[] imagen = new byte[0];
             try
@@ -141,17 +141,20 @@ namespace Datos
                     {
                         comando.CommandType = System.Data.CommandType.Text;
                         comando.Parameters.Add("@Codigo", MySqlDbType.Int32).Value = codigo;
-                        MySqlDataReader dr =(MySqlDataReader) await comando.ExecuteReaderAsync();
+                        MySqlDataReader dr = (MySqlDataReader)await comando.ExecuteReaderAsync();
+                        if (dr.Read())
+                        {
+                            imagen = (byte[])dr["Imagen"];
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
             }
-            return elimino;
+            return imagen;
 
         }
     }
 
-    }
 }
