@@ -16,17 +16,21 @@ namespace Vista
         {
             InitializeComponent();
         }
+        UsuariosForm _usuariosForm = null;
 
-        private void listaDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        ProductosForm _productosForm = null;
+        private void UsuariosToolStripButton_Click(object sender, EventArgs e)
         {
-            UsuariosForm usuariosForm = new UsuariosForm();
-            usuariosForm.Show();
+            _usuariosForm = new UsuariosForm();
+            _usuariosForm.MdiParent = this;
+            _usuariosForm.Show();
         }
 
-        private void listaDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ProductoToolStripButton_Click(object sender, EventArgs e)
         {
-            ProductosForm productosForm = new ProductosForm();
-            productosForm.Show();
+            _productosForm = new ProductosForm();
+            _productosForm.MdiParent = this;
+            _productosForm.Show();
         }
     }
 }

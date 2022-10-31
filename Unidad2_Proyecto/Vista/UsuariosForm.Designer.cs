@@ -238,7 +238,7 @@
             this.UsuariosDataGridView.Name = "UsuariosDataGridView";
             this.UsuariosDataGridView.RowHeadersWidth = 51;
             this.UsuariosDataGridView.RowTemplate.Height = 24;
-            this.UsuariosDataGridView.Size = new System.Drawing.Size(558, 150);
+            this.UsuariosDataGridView.Size = new System.Drawing.Size(555, 150);
             this.UsuariosDataGridView.TabIndex = 17;
             // 
             // errorProvider1
@@ -249,7 +249,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 450);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(551, 450);
             this.Controls.Add(this.UsuariosDataGridView);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.EliminarButton);
