@@ -85,11 +85,11 @@
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
             this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
-            this.ribbonControlAdv1.Size = new System.Drawing.Size(549, 157);
+            this.ribbonControlAdv1.Size = new System.Drawing.Size(687, 159);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
             this.ribbonControlAdv1.SystemText.RenameDisplayLabelText = "&Display Name:";
             this.ribbonControlAdv1.TabIndex = 0;
-            this.ribbonControlAdv1.Text = "ribbonControlAdv1";
+            this.ribbonControlAdv1.Text = " ";
             this.ribbonControlAdv1.ThemeName = "Office2016";
             this.ribbonControlAdv1.ThemeStyle.MoreCommandsStyle.PropertyGridViewBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             // 
@@ -127,7 +127,7 @@
             this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(75, 72);
+            this.toolStripEx1.Size = new System.Drawing.Size(75, 74);
             this.toolStripEx1.TabIndex = 0;
             // 
             // UsuariosToolStripButton
@@ -136,7 +136,7 @@
             this.UsuariosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.UsuariosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UsuariosToolStripButton.Name = "UsuariosToolStripButton";
-            this.UsuariosToolStripButton.Size = new System.Drawing.Size(66, 50);
+            this.UsuariosToolStripButton.Size = new System.Drawing.Size(66, 52);
             this.UsuariosToolStripButton.Text = "Usuarios";
             this.UsuariosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.UsuariosToolStripButton.Click += new System.EventHandler(this.UsuariosToolStripButton_Click);
@@ -264,7 +264,7 @@
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(67, 72);
+            this.toolStripEx4.Size = new System.Drawing.Size(67, 78);
             this.toolStripEx4.TabIndex = 0;
             // 
             // FacturaToolStripButton
@@ -280,7 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 502);
+            this.ClientSize = new System.Drawing.Size(685, 502);
             this.Controls.Add(this.ribbonControlAdv1);
             this.IsMdiContainer = true;
             this.Name = "Menu";
