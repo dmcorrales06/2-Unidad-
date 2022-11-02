@@ -269,7 +269,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CodigoTextBox);
             this.Name = "UsuariosForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "UsuariosForm";
             this.Load += new System.EventHandler(this.CodigoTextBox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosDataGridView)).EndInit();

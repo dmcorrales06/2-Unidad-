@@ -273,6 +273,7 @@
             this.Controls.Add(this.CodigoTextBox);
             this.Controls.Add(this.label1);
             this.Name = "ProductosForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ProductosForm";
             this.Load += new System.EventHandler(this.ProductosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
