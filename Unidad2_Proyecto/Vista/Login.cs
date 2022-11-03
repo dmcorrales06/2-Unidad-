@@ -48,10 +48,12 @@ namespace Vista
             {
                 //Menu
                 Menu formulario = new Menu();
+               
+                /* System.Security.Principal.GenericIdentity identity = new System.Security.Principal.GenericIdentity(UsuarioTextBox.Text);
+                 System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identity, null);
+                 System.Threading.Thread.CurrentPrincipal= principal;*/
+                VariableGlobal.UsuarioLogin = UsuarioTextBox.Text;
                 Hide();
-                System.Security.Principal.GenericIdentity identity = new System.Security.Principal.GenericIdentity(UsuarioTextBox.Text);
-                System.Security.Principal.GenericPrincipal principal = new System.Security.Principal.GenericPrincipal(identity, null);
-                System.Threading.Thread.CurrentPrincipal= principal;
                 formulario.Show();
             }
             else

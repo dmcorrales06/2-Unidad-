@@ -49,7 +49,7 @@
             this.FacturaDataGridView = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.GuardarButton = new System.Windows.Forms.Button();
-            this.ISVTtextBox = new System.Windows.Forms.TextBox();
+            this.ISVTextBox = new System.Windows.Forms.TextBox();
             this.DescuentoTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.SubTotalTextBox = new System.Windows.Forms.TextBox();
@@ -186,7 +186,6 @@
             this.CantidadTextBox.Name = "CantidadTextBox";
             this.CantidadTextBox.Size = new System.Drawing.Size(82, 22);
             this.CantidadTextBox.TabIndex = 9;
-            this.CantidadTextBox.TextChanged += new System.EventHandler(this.CantidadTextBox_TextChanged);
             this.CantidadTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadTextBox_KeyPress);
             // 
             // DescripcionTextBox
@@ -250,14 +249,15 @@
             this.GuardarButton.TabIndex = 9;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
-            // ISVTtextBox
+            // ISVTextBox
             // 
-            this.ISVTtextBox.Location = new System.Drawing.Point(55, 422);
-            this.ISVTtextBox.Name = "ISVTtextBox";
-            this.ISVTtextBox.ReadOnly = true;
-            this.ISVTtextBox.Size = new System.Drawing.Size(100, 22);
-            this.ISVTtextBox.TabIndex = 10;
+            this.ISVTextBox.Location = new System.Drawing.Point(55, 422);
+            this.ISVTextBox.Name = "ISVTextBox";
+            this.ISVTextBox.ReadOnly = true;
+            this.ISVTextBox.Size = new System.Drawing.Size(100, 22);
+            this.ISVTextBox.TabIndex = 10;
             // 
             // DescuentoTextBox
             // 
@@ -322,7 +322,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.DescuentoTextBox);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.ISVTtextBox);
+            this.Controls.Add(this.ISVTextBox);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.FacturaDataGridView);
@@ -367,7 +367,7 @@
         private System.Windows.Forms.DataGridView FacturaDataGridView;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button GuardarButton;
-        private System.Windows.Forms.TextBox ISVTtextBox;
+        private System.Windows.Forms.TextBox ISVTextBox;
         private System.Windows.Forms.TextBox DescuentoTextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox SubTotalTextBox;

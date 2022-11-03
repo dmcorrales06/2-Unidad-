@@ -86,6 +86,7 @@
     <Compile Include="UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VariableGlobal.cs" />
     <EmbeddedResource Include="FacturaForm.resx">
       <DependentUpon>FacturaForm.cs</DependentUpon>
     </EmbeddedResource>
