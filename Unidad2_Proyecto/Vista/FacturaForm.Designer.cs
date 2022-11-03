@@ -186,6 +186,8 @@
             this.CantidadTextBox.Name = "CantidadTextBox";
             this.CantidadTextBox.Size = new System.Drawing.Size(82, 22);
             this.CantidadTextBox.TabIndex = 9;
+            this.CantidadTextBox.TextChanged += new System.EventHandler(this.CantidadTextBox_TextChanged);
+            this.CantidadTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadTextBox_KeyPress);
             // 
             // DescripcionTextBox
             // 
@@ -210,6 +212,7 @@
             this.CodigoTextBox.Name = "CodigoTextBox";
             this.CodigoTextBox.Size = new System.Drawing.Size(178, 22);
             this.CodigoTextBox.TabIndex = 6;
+            this.CodigoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CodigoTextBox_KeyPress);
             // 
             // label3
             // 
@@ -328,6 +331,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FacturaForm";
             this.Text = "FacturaForm";
+            this.Load += new System.EventHandler(this.FacturaForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

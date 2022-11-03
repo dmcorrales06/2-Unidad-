@@ -221,7 +221,7 @@
             this.toolStripEx3.Office12Mode = false;
             this.toolStripEx3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx3.Size = new System.Drawing.Size(70, 74);
+            this.toolStripEx3.Size = new System.Drawing.Size(66, 74);
             this.toolStripEx3.TabIndex = 0;
             // 
             // toolStripButton1
@@ -229,7 +229,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(61, 52);
+            this.toolStripButton1.Size = new System.Drawing.Size(61, 71);
             this.toolStripButton1.Text = "Clientes";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -264,7 +264,7 @@
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(67, 74);
+            this.toolStripEx4.Size = new System.Drawing.Size(106, 74);
             this.toolStripEx4.TabIndex = 0;
             // 
             // FacturaToolStripButton
@@ -275,6 +275,7 @@
             this.FacturaToolStripButton.Size = new System.Drawing.Size(58, 52);
             this.FacturaToolStripButton.Text = "Factura";
             this.FacturaToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.FacturaToolStripButton.Click += new System.EventHandler(this.FacturaToolStripButton_Click);
             // 
             // tabbedMDIManager1
             // 

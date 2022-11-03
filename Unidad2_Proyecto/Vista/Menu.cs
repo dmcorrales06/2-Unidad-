@@ -12,6 +12,7 @@ namespace Vista
         UsuariosForm _usuariosForm = null;
 
         ProductosForm _productosForm = null;
+        FacturaForm _facturaForm = null;
         private void UsuariosToolStripButton_Click(object sender, EventArgs e)
         {
             if (_usuariosForm==null)
@@ -51,6 +52,26 @@ namespace Vista
         private void _productosForm_FormClosed(object sender, FormClosedEventArgs e)
         {
            _productosForm=null;
+        }
+
+        private void FacturaToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (_facturaForm == null)
+            {
+                _facturaForm = new FacturaForm();
+                _facturaForm.MdiParent = this;
+                _facturaForm.FormClosed += _facturaForm_FormClosed;
+                _facturaForm.Show();
+            }
+            else
+            {
+                _facturaForm.Activate();
+            }
+        }
+
+        private void _facturaForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
